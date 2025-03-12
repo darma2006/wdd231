@@ -1,0 +1,28 @@
+{
+    "family_name": "Lopez Solis",
+    "move_in_date": "2005-01,01",
+    "number_of_people": "4",
+    "visited_by_bishopric": true,
+    "family_members": [
+        {
+        "name": "Pedro López",
+        "gender": "Male",
+        "birthdate": "29-06-1982"
+        },
+        {
+            "name": "Hellen Solis",
+            "gender": "Female",
+            "birthdate": "11-08-1978"
+        },
+        {
+            "name": "Justin Solis",
+            "gender": "Male",
+            "birthdate": "08-09-1998"
+        },
+        {
+            "name": "Darma Lopez",
+            "gender": "Female",
+            "birthdate": "09-09-2006"
+        }
+    ]
+}

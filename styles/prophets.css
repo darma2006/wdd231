@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #0400ff;
+    padding: 5px;
+    text-align: center;
+}
+
+main {
+    background-color: #5555556c;
+    padding: 10px;
+    text-align: center;
+    display: flex;             /* Usamos flexbox */
+    flex-wrap: wrap;           /* Permite que las cards se envuelvan si no caben en una sola fila */
+    justify-content: space-around; /* Espacios distribuidos entre las cards */
+    gap: 10px;                 /* Espacio entre las cards */
+    padding: 20px;   
+}
+
+h2 {
+    color: navy;
+    margin: 0 0 1rem 0;
+       border-bottom: 1px solid #bbb;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background-color: rgba(157, 150, 255, 0.274);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #3f20c9;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 10px;
+    }
+    
+    section img {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
