@@ -123,3 +123,8 @@ function filterCourses(courseType) {
 }
 
 filterCourses('all');
+
+function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active");
+}
