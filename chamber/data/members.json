@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Company A",
+        "address": "1234 Main St, Costa Rica",
+        "phone": "(506) 555-1234",
+        "website": "https://companya.com",
+        "image": "companyA.jpg",
+        "membershipLevel": 1,
+        "additionalInfo": "Member since 2021"
+    },
+    {
+        "name": "Company B",
+        "address": "5678 Market St, Costa Rica",
+        "phone": "(506) 555-5678",
+        "website": "https://companyb.com",
+        "image": "companyB.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Silver member"
+    },
+    {
+        "name": "Company C",
+        "address": "9101 Broadway St, Costa Rica",
+        "phone": "(506) 555-9101",
+        "website": "https://companyc.com",
+        "image": "companyC.jpg",
+        "membershipLevel": 3,
+        "additionalInfo": "Gold member"
+    },
+    {
+        "name": "Company D",
+        "address": "1122 Sunset Blvd, Costa Rica",
+        "phone": "(506) 555-1122",
+        "website": "https://companyd.com",
+        "image": "companyD.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Silver member"
+    },
+    {
+        "name": "Company E",
+        "address": "3344 Pine St, Costa Rica",
+        "phone": "(506) 555-3344",
+        "website": "https://companye.com",
+        "image": "companyE.jpg",
+        "membershipLevel": 1,
+        "additionalInfo": "Member since 2020"
+    },
+    {
+        "name": "Company F",
+        "address": "5566 Oak St, Costa Rica",
+        "phone": "(506) 555-5566",
+        "website": "https://companyf.com",
+        "image": "companyF.jpg",
+        "membershipLevel": 3,
+        "additionalInfo": "Gold member"
+    },
+    {
+        "name": "Company G",
+        "address": "7788 Elm St, Costa Rica",
+        "phone": "(506) 555-7788",
+        "website": "https://companyg.com",
+        "image": "companyG.jpg",
+        "membershipLevel": 2,
+        "additionalInfo": "Silver member"
+    }
+]

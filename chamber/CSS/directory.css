@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 15px;
+    margin: 0;
+}
+
+.imagen-contenedor {
+    position: relative;
+    width: 50%;
+}
+
+
+.texto-sobre-imagen {
+    position: absolute;
+    top: 66%;
+    left: 90%;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    background: #2A318DBE;
+    border-radius: 10px;
+}
+
+header h1 {
+    color: white;
+}
+
+header, footer {
+    background-color: #2A318DBE;
+    color: white;
+    gap: 40px;
+}
+
+nav {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+.sections {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+section {
+    width: 30%;
+    padding: 5px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+    gap: 40px;
+}
+
+section h1 {
+    width: 100%;
+    background-color: #2A318DBE;
+    color: white;
+}
+
+#members-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+#member-card {
+    width: 30%;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.grid-view .member-card {
+    width: 30%;
+}
+
+.list-view .member-card {
+    width: 100%;
+}
+
+#view-toggle {
+    margin-bottom: 20px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #2A318DBE;
+    color: white;
+    text-align: center;
+    gap: 40px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 5px) {
+    nav a {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        font-size: 10px;
+        color: white;
+        padding: 10px;
+    }
+
+    nav.active a {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .texto-sobre-imagen {
+        top: 100%;
+        font-size: 1.2em;
+    }
+
+    .member-card {
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 5px;
+    }
+}
