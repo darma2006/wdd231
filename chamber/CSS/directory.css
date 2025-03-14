@@ -112,7 +112,7 @@ footer {
     cursor: pointer;
 }
 
-@media screen and (max-width: 5px) {
+@media screen and (max-width: 768px) {
     nav a {
         display: none;
     }
