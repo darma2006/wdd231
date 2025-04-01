@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Darma López Solis">
+    <title>Thank You for Joining the Chamber | Darma López Solis</title>
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="data/main.js" defer></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Joining the Chamber of Commerce</h1>
+        <nav>
+            <a href="https://byui-cse.github.io/wdd231-ww-course/week01/assignment-01.html">Home</a>
+            <a href="https://darma2006.github.io/wdd231/chamber/directory.html">Directory</a>
+            <a href="https://github.com/darma2006/wdd231.git">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/darma-soley-lopez-solis-27a024332">LinkedIn</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>We received your application!</h2>
+        <p>Thank you for joining the Chamber of Commerce. Below is a summary of your application:</p>
+
+        <ul>
+            <li><strong>First Name:</strong> <span id="firstNameDisplay"></span></li>
+            <li><strong>Last Name:</strong> <span id="lastNameDisplay"></span></li>
+            <li><strong>Email:</strong> <span id="emailDisplay"></span></li>
+            <li><strong>Mobile:</strong> <span id="mobileDisplay"></span></li>
+            <li><strong>Organization:</strong> <span id="orgNameDisplay"></span></li>
+            <li><strong>Membership Level:</strong> <span id="membershipDisplay"></span></li>
+            <li><strong>Description:</strong> <span id="descriptionDisplay"></span></li>
+            <li><strong>Application Submitted On:</strong> <span id="timestampDisplay"></span></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>©2025 | Darma López | Costa Rica |</p>
+    </footer>
+
+    <script>
+        // Fetch and display form data from URL params (for demonstration)
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('firstNameDisplay').textContent = urlParams.get('firstName');
+        document.getElementById('lastNameDisplay').textContent = urlParams.get('lastName');
+        document.getElementById('emailDisplay').textContent = urlParams.get('email');
+        document.getElementById('mobileDisplay').textContent = urlParams.get('mobile');
+        document.getElementById('orgNameDisplay').textContent = urlParams.get('orgName');
+        document.getElementById('membershipDisplay').textContent = urlParams.get('membershipLevel');
+        document.getElementById('descriptionDisplay').textContent = urlParams.get('description');
+        document.getElementById('timestampDisplay').textContent = urlParams.get('timestamp');
+    </script>
+</body>
+</html>

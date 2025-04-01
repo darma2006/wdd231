@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Darma López Solis">
+    <title>Join the Chamber of Commerce | Darma López Solis</title>
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="data/main.js" defer></script>
+    <script src="data/members.json" defer></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta property="og:title" content="Join the Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.pinimg.com/736x/47/6a/de/476ade422d23b2d1cf5f123e3a43083e.jpg">
+    <meta property="og:url" content="https://github.com/darma2006/wdd231">
+</head>
+<body>
+    <header>
+        <h1>Join the Chamber of Commerce</h1>
+        <nav>
+            <a href="https://byui-cse.github.io/wdd231-ww-course/week01/assignment-01.html">Home</a>
+            <a href="https://darma2006.github.io/wdd231/chamber/directory.html">Directory</a>
+            <a href="https://github.com/darma2006/wdd231.git">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/darma-soley-lopez-solis-27a024332">LinkedIn</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Fill out the form to join our Chamber of Commerce</h2>
+        
+        <form method="GET" action="thankyou.html" id="join-form">
+            <!-- First Name -->
+            <label for="firstName" title="First Name" autocomplete="given-name">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+            
+            <!-- Last Name -->
+            <label for="lastName" title="Last Name" autocomplete="family-name">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+            
+            <!-- Organizational Title -->
+            <label for="organizationTitle" title="Organization Title" pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title">Organizational Title:</label>
+            <input type="text" id="organizationTitle" name="organizationTitle" required pattern="[A-Za-z\s\-]{7,}">
+            
+            <!-- Email -->
+            <label for="email" title="Email Address" autocomplete="email">Email Address:</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+            
+            <!-- Mobile Phone Number -->
+            <label for="mobile" title="Mobile Phone Number" autocomplete="tel">Mobile Phone:</label>
+            <input type="tel" id="mobile" name="mobile" required autocomplete="tel">
+            
+            <!-- Organization Name -->
+            <label for="orgName" title="Organization Name" autocomplete="organization">Organization Name:</label>
+            <input type="text" id="orgName" name="orgName" required autocomplete="organization">
+            
+            <!-- Membership Level -->
+            <label for="membershipLevel" title="Membership Level">Membership Level:</label>
+            <select id="membershipLevel" name="membershipLevel" required>
+                <option value="NP">NP Membership (Non-Profit)</option>
+                <option value="Bronze">Bronze Membership</option>
+                <option value="Silver">Silver Membership</option>
+                <option value="Gold">Gold Membership</option>
+            </select>
+            
+            <!-- Organization Description -->
+            <label for="description" title="Organization Description">Business Description:</label>
+            <textarea id="description" name="description" title="Organization Description" required></textarea>
+            
+            <!-- Hidden Timestamp -->
+            <input type="hidden" id="timestamp" name="timestamp">
+            
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Membership Level Cards -->
+        <div class="membership-cards">
+            <div class="membership-card" id="npCard">
+                <h3>NP Membership</h3>
+                <p>No Fee</p>
+                <button onclick="openModal('npModal')">Learn More</button>
+            </div>
+            <div class="membership-card" id="bronzeCard">
+                <h3>Bronze Membership</h3>
+                <p>Affordable Benefits</p>
+                <button onclick="openModal('bronzeModal')">Learn More</button>
+            </div>
+            <div class="membership-card" id="silverCard">
+                <h3>Silver Membership</h3>
+                <p>Additional Benefits</p>
+                <button onclick="openModal('silverModal')">Learn More</button>
+            </div>
+            <div class="membership-card" id="goldCard">
+                <h3>Gold Membership</h3>
+                <p>Exclusive Benefits</p>
+                <button onclick="openModal('goldModal')">Learn More</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>©2025 | Darma López | Costa Rica |</p>
+    </footer>
+
+    <!-- Modals for Membership Benefits -->
+    <div class="modal" id="npModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('npModal')">&times;</span>
+            <h3>NP Membership Benefits</h3>
+            <p>No cost, but access to community events and networking opportunities.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="bronzeModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+            <h3>Bronze Membership Benefits</h3>
+            <p>Affordable membership with access to business networking events.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="silverModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silverModal')">&times;</span>
+            <h3>Silver Membership Benefits</h3>
+            <p>Additional promotional benefits including discounts on events and advertising.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="goldModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('goldModal')">&times;</span>
+            <h3>Gold Membership Benefits</h3>
+            <p>Exclusive promotional benefits including priority on events and spotlight positioning.</p>
+        </div>
+    </div>
+
+    <script>
+        // Update the timestamp field with the current time
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
