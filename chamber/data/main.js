@@ -1,13 +1,14 @@
+// Toggle the mobile menu visibility when the hamburger menu is clicked
 function toggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('active');
 }
 
-
+// Get the last modified date of the page and display it
 let lastModifiedDate = document.lastModified;
-
 document.getElementById("lastModified").textContent = lastModifiedDate;
 
+// Fetch the weather data for Cartago and display it
 async function fetchWeather() {
     const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Cartago&appid=YOUR_API_KEY&units=metric');
     const weatherData = await response.json();
@@ -22,6 +23,7 @@ async function fetchWeather() {
     `;
 }
 
+// Fetch spotlight members from the JSON file and display them
 async function fetchSpotlights() {
     const response = await fetch('data/members.json');
     const members = await response.json();
@@ -52,6 +54,7 @@ async function fetchSpotlights() {
     });
 }
 
+// Convert the membership level number to a string
 function getMembershipLevel(level) {
     switch(level) {
         case 1: return 'Member';
@@ -61,6 +64,7 @@ function getMembershipLevel(level) {
     }
 }
 
+// Initialize the page by fetching weather and spotlight data
 window.onload = () => {
     fetchWeather();
     fetchSpotlights();

@@ -17,6 +17,10 @@
 <body>
     <header>
         <h1>Join the Chamber of Commerce</h1>
+        
+        <!-- Mobile Menu Toggle -->
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+        
         <nav>
             <a href="https://byui-cse.github.io/wdd231-ww-course/week01/assignment-01.html">Home</a>
             <a href="https://darma2006.github.io/wdd231/chamber/directory.html">Directory</a>
@@ -99,7 +103,7 @@
     </main>
 
     <footer>
-        <p>©2025 | Darma López | Costa Rica |</p>
+        <p>©2025 | Darma López | Costa Rica | Last modified: <span id="lastModified"</p>
     </footer>
 
     <!-- Modals for Membership Benefits -->
@@ -146,6 +150,12 @@
 
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
         }
     </script>
 </body>

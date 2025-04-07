@@ -1,4 +1,4 @@
-/* Basic styles */
+/* Basic Reset and Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -69,6 +69,7 @@ form input, form select, form textarea {
     border-radius: 4px;
 }
 
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -100,32 +101,54 @@ footer {
     background-color: #C8EDE6;
     color: black;
     width: 100%;
+    text-align: center;
+    padding: 1rem;
 }
 
-/* Responsive Design: Adjustments for Mobile & Tablet */
+/* Mobile Navigation (Hamburger Menu) */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+/* Mobile View */
 @media (max-width: 768px) {
-    /* Header & Navigation */
-    header {
-        padding: 1rem;
-    }
-
+    /* Navigation links should be hidden on small screens */
     nav a {
-        display: inline-block;
-        margin: 5px 0;
-        font-size: 14px;
+        display: none;
     }
 
-    /* Form */
+    /* Hamburger menu (mobile toggle) visible */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* When the active class is added, show the links */
+    nav.active a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Adjust the form and cards layout on smaller screens */
     form {
-        padding: 1rem;
         width: 90%;
+        padding: 1rem;
     }
 
-    form input, form select, form textarea {
-        padding: 0.8rem;
-    }
-
-    /* Membership Cards Section */
     .membership-cards {
         display: flex;
         flex-direction: column;
@@ -144,17 +167,16 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /* Header Adjustments */
+    /* Smaller screen adjustments */
     header h1 {
         font-size: 1.2rem;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 14px;
         margin: 5px;
     }
 
-    /* Form Adjustments */
     form {
         width: 100%;
         padding: 1rem;
@@ -164,7 +186,7 @@ footer {
         padding: 1rem;
     }
 
-    /* Membership Cards */
+    /* Membership Cards on Small Screens */
     .membership-cards {
         flex-direction: column;
     }
