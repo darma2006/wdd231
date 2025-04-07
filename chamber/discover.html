@@ -6,13 +6,17 @@
   <title>Discover Your Chamber</title>
   <link rel="stylesheet" href="styles/discover.css">
   <script src="data/discover.js" defer></script>
+  <script src="data/discover.json" defer></script>
 </head>
 <body>
   <header>
     <h1>Welcome to the Chamber of Commerce</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span>&#9776;</span>
+    </div>
   </header>
 
-  <nav>
+  <nav id="navbar">
     <ul>
       <li><a href="home.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
@@ -20,19 +24,16 @@
     </ul>
   </nav>
 
-
   <main>
-
     <aside id="sidebar">
       <div id="visitMessage"></div>
     </aside>
-
 
     <section class="card-container">
       <div class="card" id="card1">
         <h2>Park Central</h2>
         <figure>
-          <img src="images/park central.jpg" alt="Park Central" loading="lazy">
+          <img src="images/park-central.jpg" alt="Park Central" loading="lazy">
         </figure>
         <address>123 Park St, Citytown</address>
         <p>A beautiful park with walking trails and a large pond.</p>
@@ -107,8 +108,7 @@
         <address>505 Zoo Blvd, Citytown</address>
         <p>Home to over 200 species, the zoo provides educational exhibits and animal encounters for all ages.</p>
         <button>Learn More</button>
-    </div>
-      
+      </div>
     </section>
   </main>
 
@@ -117,5 +117,11 @@
     <p>Last modified: <span id="lastModified"></span></p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("active");
+    }
+  </script>
 </body>
 </html>

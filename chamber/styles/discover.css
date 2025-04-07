@@ -1,140 +1,184 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  header {
-    background-color: #C8EDE6;
-    color: black;
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  nav {
-    background-color: #BDB09F;
-    color: black;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    padding: 10px;
-  }
-  
-  nav ul li a {
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  nav ul li a:hover {
-    background-color: #666;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
 
-  main {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+header {
+  background-color: #C8EDE6;
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #BDB09F;
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #666;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+#sidebar {
+  width: 25%;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+#visitMessage {
+  background-color: #e7e7e7;
+  padding: 15px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 70%;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card figure {
+  margin: 0;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card address {
+  font-style: normal;
+  margin: 10px 0;
+  color: #555;
+}
+
+.card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #BDB09F;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #daccba;
+}
+
+footer {
+  background-color: #C8EDE6;
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  /* Mobile styling */
+  body {
+    font-size: 14px;
   }
-  
+
   #sidebar {
-    width: 25%;
-    padding: 10px;
-    background-color: #f1f1f1;
-  }
-  
-  #visitMessage {
-    background-color: #e7e7e7;
-    padding: 15px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  
-  .card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 70%;
-  }
-  
-  .card {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .card figure {
-    margin: 0;
-  }
-  
-  .card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .card address {
-    font-style: normal;
-    margin: 10px 0;
-    color: #555;
-  }
-  
-  .card p {
-    font-size: 1em;
-    margin-bottom: 15px;
-  }
-  
-  .card button {
-    background-color: #BDB09F;
-    color: black;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .card button:hover {
-    background-color: #daccba;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
-  footer {
-    background-color: #C8EDE6;
-    color: black;
-    padding: 10px 0;
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #BDB09F;
+  }
+
+  nav ul li {
+    width: 100%;
     text-align: center;
+    padding: 10px 0;
   }
-  
-  @media (min-width: 641px) {
-    .card-container {
-      grid-template-columns: 1fr 1fr;
-    }
+
+  .hamburger {
+    display: block;
   }
-  
-  @media (min-width: 1025px) {
-    .card-container {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
+
+  #navbar.active ul {
+    display: flex;
   }
-  
-  .card img:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+}
+
+@media (min-width: 641px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 1025px) {
+  /* For desktops */
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card img:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
   
   

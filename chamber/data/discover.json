@@ -1,0 +1,61 @@
+{
+    "places": [
+      {
+        "id": "card1",
+        "name": "Park Central",
+        "address": "123 Park St, Citytown",
+        "description": "A beautiful park with walking trails and a large pond.",
+        "image": "images/park-central.jpg"
+      },
+      {
+        "id": "card2",
+        "name": "Museum of Art",
+        "address": "456 Art Ave, Citytown",
+        "description": "A museum showcasing local artists and historical exhibits.",
+        "image": "images/museum.jpg"
+      },
+      {
+        "id": "card3",
+        "name": "Downtown Market",
+        "address": "789 Market St, Citytown",
+        "description": "An open-air market featuring fresh produce, handmade crafts, and local foods, open year-round.",
+        "image": "images/market.jpg"
+      },
+      {
+        "id": "card4",
+        "name": "Historic Theatre",
+        "address": "101 Theatre Ln, Citytown",
+        "description": "A vintage theater offering a variety of live performances, films, and community events.",
+        "image": "images/theatre.jpg"
+      },
+      {
+        "id": "card5",
+        "name": "Botanical Garden",
+        "address": "202 Garden Rd, Citytown",
+        "description": "A serene garden filled with exotic plants and flowers, perfect for nature lovers and photographers.",
+        "image": "images/garden.jpg"
+      },
+      {
+        "id": "card6",
+        "name": "City Observatory",
+        "address": "303 Skyline Blvd, Citytown",
+        "description": "Offers panoramic views of the city, with public stargazing nights and educational events.",
+        "image": "images/observatory.jpg"
+      },
+      {
+        "id": "card7",
+        "name": "Riverwalk",
+        "address": "404 Riverside Dr, Citytown",
+        "description": "A scenic walking trail along the river with bike rentals, cafes, and outdoor activities.",
+        "image": "images/riverwalk.jpg"
+      },
+      {
+        "id": "card8",
+        "name": "City Zoo",
+        "address": "505 Zoo Blvd, Citytown",
+        "description": "Home to over 200 species, the zoo provides educational exhibits and animal encounters for all ages.",
+        "image": "images/zoo.jpg"
+      }
+    ]
+  }
+  
