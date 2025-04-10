@@ -2,6 +2,8 @@
 let lastModifiedDate = document.lastModified;
 document.getElementById("lastModified").textContent = lastModifiedDate;
 
+document.getElementById("nav-discover").classList.add("active-link");
+
 // Set the visit message based on localStorage
 let lastVisit = localStorage.getItem('lastVisit');
 let currentDate = new Date();
@@ -55,3 +57,14 @@ fetch('data/discover.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+
+  card.innerHTML = `
+  <h2>${place.name}</h2>
+  <figure>
+    <img src="${place.image}" alt="${place.name}" loading="lazy" onerror="this.src='images/placeholder.jpg'">
+  </figure>
+  <address>${place.address}</address>
+  <p>${place.description}</p>
+  <button aria-label="Learn more about ${place.name}">Learn More</button>
+`;
+

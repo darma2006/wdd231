@@ -5,7 +5,7 @@
         "name": "Park Central",
         "address": "123 Park St, Citytown",
         "description": "A beautiful park with walking trails and a large pond.",
-        "image": "images/park-central.jpg"
+        "image": "images/park_central.jpg"
       },
       {
         "id": "card2",

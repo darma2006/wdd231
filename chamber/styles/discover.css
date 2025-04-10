@@ -117,6 +117,17 @@ main {
   background-color: #daccba;
 }
 
+.active-link {
+  background-color: #666;
+  color: white;
+}
+
+a:focus, button:focus {
+  outline: 2px dashed #000;
+  outline-offset: 2px;
+}
+
+
 footer {
   background-color: #C8EDE6;
   color: black;
