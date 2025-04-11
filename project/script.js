@@ -32,7 +32,7 @@ function displayMovies(movies) {
 
 
     movieItem.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy">
       <h3>${movie.title}</h3>
       <button onclick="viewMovieDetails(${movie.id})">View Details</button>
       <button onclick="saveFavorite('${movie.id}', '${movie.title}')">Add to Favorites</button>
